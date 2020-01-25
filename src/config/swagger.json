@@ -1,0 +1,58 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "tags": [
+          "Register user"
+        ],
+        "summary": "Register a new user for the application.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "content": {
+          "application/json": {}
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "body",
+            "description": "User name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "body",
+            "description": "User email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "passowrd",
+            "in": "body",
+            "description": "User password",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  }
+}
